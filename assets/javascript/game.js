@@ -23,11 +23,11 @@ guess = "";
 
 else if (userGuess != computerChoice) {
 turns--;
-guess = userGuess + ", ";
+guess += userGuess + ", ";
 }
 
 if (turns == 0) {
-  loses++;
+  losses++;
   turns = 9;
   guess = "";
 }
