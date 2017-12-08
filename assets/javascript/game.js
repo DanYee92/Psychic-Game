@@ -8,12 +8,26 @@ var guess = "";
 var computerOption = ["a", "b", "c", "d", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 
-//create function for guessing the computer letter
+//need to write syntax for recording what the user entered
+//document is to write out which key was pressed
+//onkeyup = is the even key when button is pressed
+//function(event) writes the rule for what happens when key is pressed
 document.onkeyup = function(event){
 
+
+  //make var for userGuess
+  //event.key is the syntax for registering the key identifiers when pressed.
   var userGuess = event.key;
 
+
+  //make syntax for computer to pick a random letter from the array to choose which letter the user should guess
+  //Math.floor to round the answer to the nearest whole integer but it is not needed in this case since there are only strings
+  //Math.random() to choose a random object from the array
+  //* to add what pool or options list to choose from
+  //computerOption is the pool to choose from
+  //.length counts the elements in the array and closes the array which closes the array
   var computerChoice = computerOption[Math.floor(Math.random() * computerOption.length)];
+
 
 if (userGuess === computerChoice){
 wins++;
